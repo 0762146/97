@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kwitter</title>
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="kwitter.js"></script>
+</head>
+<body>
+<center>
+	<h1 class="header">	
+		Kwitter	<sup>
+	<img src="m2.png">
+	</sup>
+</h1>
+	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-11 login_div">
+		<div class="hover14 column">
+			<div>
+			  <figure><img src="logo.png" class="bird"></figure>
+			  
+			</div>
+			<div>
+		
+		<h3 >See what is happening in the world right now</h3>
+		<h4 >Join Kwitter today</h4>
+		<div class="form-group">
+		  <label >User Name:</label>
+		  <input type="text" id="User_name" class="form-control" placeholder="Enter Your Username">
+
+		</div>
+		<button id="login_button" class="btn btn-primary" onclick="addUser()">Log in</button>
+		<br><br>
+	</div>
+</center>
+<style>
+	body{
+		background-color:midnightblue;
+		text-align: justify;
+		color:mintcream;
+		font-family:monospace;
+	}
+	img{
+		height: 100px;
+	}
+	#sixth{
+  overflow:hidden;
+}
+
+#login_button>button{
+  z-index:1;
+  transition:color .5s ease;
+}
+
+#login_button .border{
+  z-index:0;
+  background:white;
+  width:30px;
+  height:30px;
+  transform:rotate(45deg);
+}
+
+#login_button>.border:nth-of-type(1){
+  top:-35px;
+  left:-30px; 
+}
+
+#login_button>.border:nth-of-type(2){
+  top:-35px;
+  right:-30px;
+}
+
+#login_button>.border:nth-of-type(3){
+  bottom:-35px;
+  left:-30px;
+}
+
+#login_button>.border:nth-of-type(4){
+  bottom:-35px;
+  right:-30px;
+}
+
+#login_button:hover .border{
+  transform:scale(15.7) rotate(45deg);
+}
+
+#login_button:hover button{
+  color:#ff9292;
+  transition:color 2s ease;
+}
+.hover14 figure {
+	position: relative;
+}
+.hover14 figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+
+
+
+		
+	
+</style>
+</body>
+</html>
